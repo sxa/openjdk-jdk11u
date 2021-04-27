@@ -310,6 +310,8 @@ AC_DEFUN([PLATFORM_SETUP_TARGET_CPU_BITS],
         OPENJDK_TARGET_CPU=x86
       elif test "x$OPENJDK_TARGET_CPU_ARCH" = "xsparc"; then
         OPENJDK_TARGET_CPU=sparc
+      elif test "x$OPENJDK_TARGET_CPU_ARCH" = "xaarch64"; then
+        OPENJDK_TARGET_CPU=arm
       else
         AC_MSG_ERROR([Reduced build (--with-target-bits=32) is only supported on x86_64 and sparcv9])
       fi
